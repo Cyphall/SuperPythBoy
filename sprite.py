@@ -117,8 +117,11 @@ class Player(Sprite):
 		inputs = SDL_GetKeyboardState(None)
 		if inputs[SDL_SCANCODE_A]:  # Gauche
 			self.move("left", 70)
-		if inputs[SDL_SCANCODE_D]:  # Droite
+		elif inputs[SDL_SCANCODE_D]:  # Droite
 			self.move("right", 70)
+		else:
+			if self.is_grounded:
+				self.vector[0] = 0
 		if inputs[SDL_SCANCODE_SPACE]:  # Espace
 			if not self.space_was_pressed:
 				if self.flying_since < 5:

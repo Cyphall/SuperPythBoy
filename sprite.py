@@ -80,7 +80,7 @@ class TextSprite(SpriteRaw):
 
 class Player(Sprite):
 	def __init__(self, screen, map_objects):
-		super().__init__(screen, "player.png")
+		super().__init__(screen, "player2.png")
 		self.space_was_pressed = False
 		self.map_objects = map_objects
 		self.has_gravity = True

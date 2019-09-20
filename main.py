@@ -18,7 +18,7 @@ def init():
 	ctypes.windll.user32.SetProcessDPIAware()
 	SDL_Init(SDL_INIT_VIDEO)
 	TTF_Init()
-	screen = display.Screen("Plateformer", (SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED), (1600, 960), SDL_WINDOW_SHOWN, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC)
+	screen = display.Screen("Plateformer", (SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED), (1600, 960), SDL_WINDOW_SHOWN, SDL_RENDERER_ACCELERATED)
 	
 	main(screen)
 	
